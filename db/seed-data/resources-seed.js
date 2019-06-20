@@ -1,6 +1,5 @@
-module.exports: [
+module.exports = [
     {
-        resource_id: 1,
         url: 'https://www.google.com',
         title: 'Google search',
         description: 'PURE EVIL',
@@ -8,7 +7,6 @@ module.exports: [
         user_id: 1,
     },
     {
-        resource_id: 2,
         url: 'https://www.bing.com',
         title: 'Bing',
         description: 'Total rubbish',
@@ -16,7 +14,6 @@ module.exports: [
         user_id: 2,
     },
     {
-        resource_id: 3,
         url: 'https://www.sporcle.com',
         title: 'sporcle',
         description: 'Trivia',
@@ -24,7 +21,6 @@ module.exports: [
         user_id: 3,
     },
     {
-        resource_id: 4,
         url: 'https://www.bbc.co.uk/sport',
         title: 'BBC Sport',
         description: 'Sports updates',
@@ -32,7 +28,6 @@ module.exports: [
         user_id: 5,
     },
     {
-        resource_id: 5,
         url: 'https://www.example.com',
         title: 'Example',
         description: 'Example',

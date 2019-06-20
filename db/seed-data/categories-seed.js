@@ -1,4 +1,4 @@
-module.exports: [
+module.exports = [
     {
         category_id: 1,
         name: 'Science',

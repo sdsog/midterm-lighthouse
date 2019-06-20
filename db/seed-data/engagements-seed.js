@@ -1,6 +1,5 @@
-module.exports: [
+module.exports = [
     {
-        engagement_id: 1,
         comment: 'RANDOM STRING',
         rating: 4,
         liked: true,
@@ -8,7 +7,6 @@ module.exports: [
         user_id: 1
     },
     {
-        engagement_id: 2,
         comment: 'ANOTHER RANDOM STRING',
         rating: 2,
         liked: false,
@@ -16,7 +14,6 @@ module.exports: [
         user_id: 2
     },
     {
-        engagement_id: 3,
         comment: 'RANDOM STRING 3',
         rating: 1,
         liked: true,
@@ -24,7 +21,6 @@ module.exports: [
         user_id: 3
     },
     {
-        engagement_id: 4,
         comment: 'RANDOM STRING 4',
         rating: 5,
         liked: true,
@@ -32,7 +28,6 @@ module.exports: [
         user_id: 4
     },
     {
-        engagement_id: 5,
         comment: 'RANDOM STRING 5',
         rating: 2,
         liked: true,
