@@ -1,7 +1,37 @@
 body {
   background-color: #EEE;
+  
+  header {
+    background-color: blue;
+  }
 
   h1 {
     color: #244751;
+    height: 120px;
+    text-align: center;
+    color: white;
   }
+}
+
+.sidebar {
+  border: 3px solid;
+  width: 20%;
+  height: 100%;
+}
+
+.col-sm {
+  border: 3px solid black;
+  height: 700px;
+}
+
+#column1 { 
+  background-color: beige;
+}
+
+#column2 { 
+  background-color: yellow;
+}
+
+#column3 { 
+  background-color: salmon;
 }
