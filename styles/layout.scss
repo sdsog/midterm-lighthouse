@@ -1,37 +1,17 @@
-body {
-  background-color: #EEE;
-  
-  header {
-    background-color: blue;
-  }
+ // GLOBAL SETTINGS FOR FONT AND COLORS 
+@import "global-settings.scss";
 
-  h1 {
-    color: #244751;
-    height: 120px;
-    text-align: center;
-    color: white;
-  }
-}
+// SKELETON 
+@import "skeleton-main.scss";
+@import "sliding-sidebar.scss";
 
-.sidebar {
-  border: 3px solid;
-  width: 20%;
-  height: 100%;
-}
+// LOGGED IN STATES
+@import "manage-resource.scss";
+@import "add-resource.scss";
+@import "account-settings.scss";
+@import "user-collections.scss";
 
-.col-sm {
-  border: 3px solid black;
-  height: 700px;
-}
 
-#column1 { 
-  background-color: beige;
-}
-
-#column2 { 
-  background-color: yellow;
-}
-
-#column3 { 
-  background-color: salmon;
-}
+// NOT LOGGED IN STATE: shows all tweets
+@import "all-collections.scss";
+@import "resource-detail.scss";

@@ -1,0 +1,54 @@
+// COLOR PALETTE FOR REFENCE: 
+
+// $jet: #312F2F;
+// $platinum: #DEE5E5;
+// $light-blue: #A6D9F7;
+// $pale-aqua: #BCCCE0;
+// $middle-blue-green: #84DCCF; 
+// $awesome: #FF1053;
+
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: $primary-font;
+  background: #fafafa;
+}
+
+p {
+  font-family: $primary-font;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
