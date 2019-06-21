@@ -37,7 +37,7 @@ exports.seed = function (knex, Promise) {
       return knex('resources').insert(resourceSeeds)
     })
     .then(function () {
-      return knex('engagement').insert(engagementSeeds)
+      return knex('engagements').insert(engagementSeeds)
     })
     .then(function () {
       return knex('categories').insert(categorySeeds)

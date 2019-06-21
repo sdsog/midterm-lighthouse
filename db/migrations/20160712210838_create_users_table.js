@@ -32,7 +32,7 @@ exports.up = function (knex, Promise) {
       }),
       knex.schema.createTable('engagements', function (table) {
         table.increments('id').primary();
-        table.string('comments');
+        table.string('comment');
         table.integer('rating');
         table.boolean('liked');
         table.integer('resource_id')
