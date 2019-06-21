@@ -21,7 +21,7 @@ const cookieSession = require("cookie-session");
 app.use(
   cookieSession({
     name: "user_id",
-    keys: ["user_id"]
+    keys: ["user_id"],
   })
 );
 // const loginRoutes = require("./routes/login");
@@ -42,7 +42,7 @@ app.use(
     src: __dirname + "/styles",
     dest: __dirname + "/public/styles",
     debug: true,
-    outputStyle: "expanded"
+    outputStyle: "expanded",
   })
 );
 app.use(express.static("public"));
@@ -61,17 +61,15 @@ app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
 
-
-
-  //LOGIN 
+//LOGIN
 
 app.post("/login", (req, res) => {
   req.session.user_id = req.params.id;
-  res.redirect('/');
-  });
+  res.redirect("/");
+});
 
-  //LOGOUT
-   
+//LOGOUT
+
 app.post("/logout", (req, res) => {
   res.clearCookie("user_id");
   res.clearCookie("user_id.sig");

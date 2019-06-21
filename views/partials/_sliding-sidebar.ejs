@@ -9,7 +9,7 @@
         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Login</a>
         <ul class="collapse list-unstyled" id="homeSubmenu">
 
-          <form>
+          <form method="POST" action="/login">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -46,6 +46,12 @@
     </ul>
 
     <ul class="list-unstyled CTAs">
-      <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">LOGOUT</a></li>
+        <form method="POST" action="/logout">
+
+        <button type="submit" class="btn btn-primary">Logout</button>
+        </form>
+
+
+      <li><a href="#" class="article">LOGOUT</a></li>
     </ul>
   </nav>
