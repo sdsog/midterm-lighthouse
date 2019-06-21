@@ -21,16 +21,6 @@ $(() => {
     }
   });
 
-  //LOGIN 
-
-  app.post("/login", (req, res) => {
-    req.session.user_id = req.params.id;
-    res.redirect(‘/’);
-    });
-
-
-
-
   // LOAD AND RENDER RESOURCES
   function loadResources() {
     $.getJSON("/api/resources").done(function(resources) {
@@ -41,7 +31,7 @@ $(() => {
   function renderResource(resources) {
     for (let resource of resources) {
       $(".card").prepend(createResource(resource));
-      // console.log(resource, "1");
+      console.log(resource, "1");
     }
   }
 
@@ -65,7 +55,7 @@ $(() => {
       newResource
     );
 
-    // console.log(resourceData.title);
+    console.log(resourceData.title);
     return newResource;
   }
 

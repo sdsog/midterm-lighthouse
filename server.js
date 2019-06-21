@@ -61,24 +61,17 @@ app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
 
-// app.post("/login", (req, res) => {
-//   // req.session.id = req.params.id;
-//   let email = req.body.email;
-//   let password = req.body.password;
 
-//   res.redirect("/");
-// });
-// app.get("/login", (req, res) => {
-//   const email = req.body.email;
-//   const password = req.body.password;
-//   console.log(email, password);
-//   res.redirect("/");
-// });
-app.get("/login", (req, res) => {
-  req.session.user_id = req.query.users_id;
-  res.redirect("/");
-});
 
+  //LOGIN 
+
+app.post("/login", (req, res) => {
+  req.session.user_id = req.params.id;
+  res.redirect('/');
+  });
+
+  //LOGOUT
+   
 app.post("/logout", (req, res) => {
   res.clearCookie("user_id");
   res.clearCookie("user_id.sig");
