@@ -5,6 +5,8 @@ const router = express.Router();
 const dataHelpers = require("../data-helpers/data-helpers");
 
 module.exports = knex => {
+
+  //GET All Resources
   router.get("/", (req, res) => {
     knex
       .select("*")
@@ -14,8 +16,21 @@ module.exports = knex => {
       });
   });
 
-  router.post("/resources", (req, res) => {
-    // const newTitle = req.body.title;
+  // GET Reource Detail Page
+  router.get("/:id", (req, res) => {
+    const resourceId = req.params.id;
+    dataHelpers.renderResource(resourceId).then((result) => {
+      console.log('resource found:', result);
+      res.render("resource", result);
+    }).catch((error) => {
+      res.status(404).send('resource not found');
+    })
+    // res.render("resource", { id: req.session.user_id });
+
+  });
+
+// POST New Resource
+  router.post("/", (req, res) => {
 
     const newResource = {
       title: req.body.title,
@@ -24,23 +39,10 @@ module.exports = knex => {
       user_id: req.session.user_id,
     };
 
-    dataHelpers.saveNewResource(newResource, err => {
-      if (err) {
-        res.status(500).json({ error: err.message });
-      } else {
-        res.status(201);
-        res.redirect("/");
-      }
-
-      // url: req.body.url,
-      // description: req.body.description,
-
-      console.log("NEW", newResource);
-      // knex("resources")
-      // .into({ title: title, url: url, description: description })
-      // .then(results => {
-      //   res.json(results);
-      // });
+    dataHelpers.saveNewResource(newResource).then((id) => {
+      res.status(201).send(id);
+    }).catch(err => {
+      res.status(500).json({ error: err });
     });
   });
 
