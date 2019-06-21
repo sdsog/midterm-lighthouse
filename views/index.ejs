@@ -1,437 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- ALL SCRIPTS, STYLESHEETS ETC. -->
-    <% include ./partials/_scripts %>
 
-    <title>Resource Manager</title>
-  </head>
+<head>
 
-  <body>
-    <div class="wrapper">
-      <!-- Sidebar Holder -->
-      <nav id="sidebar" class="active">
-        <div class="sidebar-header">
-          <h3>Resource Manager</h3>
-        </div>
+  <!-- ALL SCRIPTS, STYLESHEETS ETC. -->
+  <% include ./partials/_scripts %>
 
-        <ul class="list-unstyled components">
-          <p></p>
-          <li class="active">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
-              >Login</a
-            >
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-              <form class="form" action="/login" method="GET">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="exampleInputEmail1"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter email"
-                  />
+  <title>Resource Manager</title>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+
+      <div id="sliding-sidebar">
+        <% include ./partials/_sliding-sidebar %>
+      </div>
+
+    <!-- Page Content Holder -->
+    <div id="content" style="margin: 0 auto">
+
+      <div id="top-nav">
+            <% include ./partials/_nav-bar %>
+      </div>
+
+      <div id="all-collections">
+            <% include ./partials/_all-collections %>
+      </div>
+
+      <div id="all-collections">
+        <% include ./partials/_all-collections %>
+      </div>
+
+      <div id="resource-detail">
+        <% include ./partials/_resource-detail %>
+      </div>
+
+      <div id="manage-resources">
+        <% include ./partials/_user-collections %>
+      </div>
+
+      <div id="account-settings">
+        <% include ./partials/_account-settings %>
+      </div>
+
+      <div id="add-resource">
+        <% include ./partials/_add-resource %>
+      </div>
+
+      <div id="manage-resources">
+        <% include ./partials/_manage-resource %>
+      </div>
+
+
+      <h2 class="text-center">Curated Collections</h2>
+      <p class="lead text-center">Find. Collect. Share.</p>
+
+      <div class="py-5">
+        <div class="container">
+          <div class="row hidden-md-up">
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input
-                    name="users_id"
-                    type="password"
-                    class="form-control"
-                    id="exampleInputPassword1"
-                    placeholder="Password"
-                  />
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </ul>
-          </li>
-          <p class="mt-4 mb-1">Manage Account</p>
-          <li>
-            <a href="#">Saved Collection</a>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-              >View Collections</a
-            >
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li><a href="#">All Collections</a></li>
-              <li><a href="#">New</a></li>
-              <li><a href="#">Popular</a></li>
-              <li><a href="#">Uncategorized</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Portfolio</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
+              </div>
 
-        <ul class="list-unstyled CTAs">
-          <li>
-            <a href="/logout" class="article">LOGOUT</a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Page Content Holder -->
-      <div id="content" style="margin: 0 auto">
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button
-                type="button"
-                id="sidebarCollapse"
-                class="btn btn-info navbar-btn"
-              >
-                <i class="glyphicon glyphicon-align-left"></i>
-                <span>LOGIN / REGISTER</span>
-              </button>
             </div>
 
-            <div
-              class="collapse navbar-collapse"
-              id="bs-example-navbar-collapse-1"
-            >
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">SEARCH</a></li>
-              </ul>
+            <div class="col-md-4">
+
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+
             </div>
-          </div>
-        </nav>
 
-        <div id="all-collections">
-          --> <% include ./partials/_all-collections %>
-        </div>
+            <div class="col-md-4">
 
-        <div id="resource-detail">
-          <% include ./partials/_resource-detail %>
-        </div>
-
-        <div id="manage-resources">
-          <% include ./partials/_user-collections %>
-        </div>
-
-        <div id="account-settings">
-          <% include ./partials/_account-settings %>
-        </div>
-
-        <div id="add-resource">
-          <% include ./partials/_add-resource %>
-        </div>
-
-        <div id="manage-resources">
-          <% include ./partials/_manage-resource %>
-        </div>
-        -->
-
-        <h2 class="text-center">Curated Collections</h2>
-        <p class="lead text-center">Find. Collect. Share.</p>
-
-        <div class="py-5">
-          <div class="container">
-            <div class="row hidden-md-up">
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
             </div>
-            <br />
 
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
+          </div><br>
+
+          <div class="row">
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
+
             </div>
-          </div>
-        </div>
+            <div class="col-md-4">
 
-        <div class="line"></div>
-
-        <h2 class="text-center">Popular</h2>
-
-        <div class="py-5">
-          <div class="container">
-            <div class="row hidden-md-up">
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
             </div>
-            <br />
+            <div class="col-md-4">
 
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="line"></div>
-
-        <h2 class="text-center">Popular</h2>
-
-        <div class="py-5">
-          <div class="container">
-            <div class="row hidden-md-up">
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-  </body>
+      <div class="line"></div>
+
+      <h2 class="text-center">Popular</h2>
+
+      <div class="py-5">
+        <div class="container">
+          <div class="row hidden-md-up">
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div><br>
+
+          <div class="row">
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <h2 class="text-center">Popular</h2>
+
+      <div class="py-5">
+        <div class="container">
+          <div class="row hidden-md-up">
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div><br>
+
+          <div class="row">
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-4">
+
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+
+
+</body>
+
 </html>
