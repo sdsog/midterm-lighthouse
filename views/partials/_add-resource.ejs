@@ -20,24 +20,24 @@
 <p>found in partial /view/partials/_add-resource</p>
 <p>Where user can add resource definining title, description, url, title</p>
 
-<form>
+<form method="POST" action="/resources">
 
   <div class="form-group">
     <label>TITLE</label>
-    <input type="email" class="form-control" aria-describedby="emailHelp"
-      placeholder="Enter email">
+    <input type="title" class="form-control" aria-describedby="emailHelp"
+      placeholder="Title" name="title">
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">URL</label>
-    <input type="email" class="form-control" aria-describedby="emailHelp"
-      placeholder="Enter email">
+    <label>URL</label>
+    <input type="url" class="form-control" aria-describedby="emailHelp"
+      placeholder="Enter url" name="url">
   </div>
 
   <div class="form-group">
     <label for="exampleInputEmail1">DESCRIPTION</label>
-    <input type="email" class="form-control" aria-describedby="emailHelp"
-      placeholder="Enter email">
+    <input type="description" class="form-control" aria-describedby="emailHelp"
+      placeholder="Enter description" name="description]">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
