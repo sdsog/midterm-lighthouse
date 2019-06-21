@@ -63,17 +63,3 @@ app.listen(PORT, () => {
 
 //LOGIN
 
-app.post("/login", (req, res) => {
-  const id = req.body.id;
-  console.log(id);
-  req.session.user_id = req.body.id;
-  res.redirect("/");
-});
-
-//LOGOUT
-
-app.post("/logout", (req, res) => {
-  res.clearCookie("user_id");
-  res.clearCookie("user_id.sig");
-  res.redirect("/");
-});

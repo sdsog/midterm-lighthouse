@@ -9,4 +9,5 @@ module.exports = (knex) => {
     app.get("/", req, res) => {
         
     }
+    
 }
