@@ -50,16 +50,14 @@ app.use(express.static("public"));
 // Mount all resource routes
 app.use("/api/users", usersRoutes(knex));
 app.use("/api/resources", resourceRoutes(knex));
+app.use("/resource", resourceRoutes(knex));
 // app.use("/api/users");
 
 // Home page
 app.get("/", (req, res) => {
-  res.render("index", { id: req.session.user_id });
+  res.render("index", { id: req.session.user_id, list: [] });
 });
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
 });
-
-
-

@@ -20,18 +20,21 @@
       </div>
 
     <!-- Page Content Holder -->
-    <div id="content" style="margin: 0 auto">
+    <div id="content" style="margin: 0 auto; width: 100%">
 
         <div id="top-nav">
             <% include ./partials/_nav-bar %>
         </div>
 
-      
-          <div id="resource-detail">
-              <% include ./partials/_resource-detail.ejs %>
-            </div>
 
 
+
+
+            <ul><li><%= url %></li>
+              <li><%= title %></li>
+              <li><%= description %></li>
+              <li><%= favicon %></li>
+              <li><%= user_id %></li></ul>
 
 
     
