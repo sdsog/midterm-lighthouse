@@ -7,6 +7,31 @@
 	top: 0;
 	right: 0;
 	left: 0;
-	color: $jet;
+	padding-bottom: 40px;
+	background-color: $pale-aqua;
 	box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.81);
+}
+
+#sidebarCollapse {
+	position: fixed;
+	z-index: 1;
+}
+
+.navbar {
+	#user-nav-box {
+		position: fixed;
+		width: 100%;
+		display: inline-block;
+		margin-right: 0;
+	}
+
+	.create-resource {
+		float: right;
+		margin-right: 10px;
+	}
+
+	.user-logout {
+		float: right;
+		margin-right: 80px;
+	}
 }

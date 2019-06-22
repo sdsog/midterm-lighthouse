@@ -2,16 +2,45 @@
     <div class="container-fluid">
 
       <div class="navbar-header">
+
+
         <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
           <i class="glyphicon glyphicon-align-left"></i>
-          <span>LOGIN / REGISTER</span>
+          <span>SETTINGS</span>
         </button>
+
+
+        <% if(id){ %>
+
+        <div id ="user-nav-box">
+
+            <form method="POST" action="api/users/logout">
+
+        <button type="submit"  class="user-logout btn btn-info">
+          
+            <span>LOGOUT</span>
+        </button>
+
+        </form>
+
+
+          <button type="button" class="create-resource btn btn-info">
+              <span class="glyphicon glyphicon-star aria-hidden="true">CREATE RESOURCE</span>
+            
+            </button>
+
+     
+
+          </div>
+
+          <% } %>
+
+
+    
+
+
+
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">SEARCH</a></li>
-        </ul>
-      </div>
     </div>
   </nav>

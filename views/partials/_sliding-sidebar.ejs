@@ -1,55 +1,81 @@
 <nav id="sidebar" class="active">
-    <div class="sidebar-header">
-      <h3>Resource Manager</h3>
-    </div>
 
     <ul class="list-unstyled components">
-      <p></p>
-      <li class="active">
-        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Login</a>
-        <ul class="collapse list-unstyled" id="homeSubmenu">
 
-          <form method="POST" action="/api/users/login">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" aria-describedby="emailHelp"
-                placeholder="Enter email">
+    <% if(!id){ %>
 
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" placeholder="Password" name="id">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
 
-        </ul>
-      </li>
-      <p class="mt-4 mb-1">Manage Account</p>
+      <div class="login-forms">
+        
+          <p class="account-prompt-text">Existing user?</p>
+
+
+      <form method="POST" action="/api/users/login">
+        <div class="form-group">
+      
+          <input type="email" class="form-control prompt email-form" aria-describedby="emailHelp"
+            placeholder="Enter email">
+
+        </div>
+        <div class="form-group">
+         
+          <input type="password" class="form-control prompt" placeholder="Enter password" name="id">
+       
+        </div>
+        <button type="submit" class="btn btn-primary btn-block login-button">Login</button>
+      </form>
+
+      <p p class ="password-help">Forgotten your password? Click here</p>
+
+      
+    </form>
+
+    <div class="create-account">
+
+      <p class="account-prompt-text">Not already a user?</p>
+
+      <button type="submit" class="btn btn-primary btn-block btn-secondary create-account-button">Create Account</button>
+      
+
+    </div>
+
+
+    
+
+      <% } else { %>
+        
+    
+
+        <div class="logged-in">
+
+            <p class="account-prompt-text welcome">Welcome Back!</p>
+  
+
       <li>
-        <a href="#">Saved Collection</a>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">View Collections</a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-          <li><a href="#">All Collections</a></li>
-          <li><a href="#">New</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="#">Uncategorized</a></li>
 
-        </ul>
-      </li>
-      <li>
-        <a href="#">Portfolio</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
+          <a href="#" class="user-options">Create Resource</a>
+          
+          <a href="#" class="user-options">View Collections</a>
+          <a href="#" class="user-options">Manage Account</a>
 
-    <ul class="list-unstyled CTAs">
+      </form>
+  
+      <div class="create-account">
+  
         <form method="POST" action="api/users/logout">
+        <button type="submit" class="btn btn-warning btn-block btn-secondary create-account-button">Logout</button>
+       </form>
+        
+  
+      </div>
 
-        <button type="submit" class="btn btn-primary">Logout</button>
-        </form>
 
+        </div>
+
+  
+     
+      <% } %>
+      
     </ul>
+
   </nav>
