@@ -1,5 +1,8 @@
 function createResource(resourceData) {
+  console.log(resourceData);
   let $url = resourceData.url;
+  let $id = resourceData.id;
+  console.log($id);
   let newResource = $("<div class='card'>");
   $(`<img class="card-img">`)
     .attr("src", resourceData.favicon)
@@ -11,7 +14,7 @@ function createResource(resourceData) {
     .text(resourceData.description)
     .appendTo(newResource);
   $(`<a href="${$url}" class='card-link'>Visit</a>`).appendTo(newResource);
-  $(`<a href="#popup1" class='card-link'>More details</a>`).appendTo(
+  $(`<a href="/resource/${$id}" class='card-link'>More details</a>`).appendTo(
     newResource
   );
   return newResource;
