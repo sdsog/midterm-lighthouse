@@ -1,8 +1,45 @@
-// COLOR PALETTE FOR REFENCE: 
+// COLOR PALETTE FOR REFENCE:
 
 // $jet: #312F2F;
 // $platinum: #DEE5E5;
 // $light-blue: #A6D9F7;
 // $pale-aqua: #BCCCE0;
-// $middle-blue-green: #84DCCF; 
+// $middle-blue-green: #84DCCF;
 // $awesome: #FF1053;
+
+#my-resources-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#my-resources-container {
+	h1 {
+		text-align: center;
+	}
+
+	.card {
+		margin: 5px;
+		width: 30%;
+		height: 180px;
+	}
+
+	.card-title {
+		margin: 3px 0 3px 5px;
+	}
+
+	.card-text {
+		margin: 3px 0 3px 5px;
+	}
+
+	.card:hover {
+		box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.81);
+	}
+
+	.card-img {
+		display: none;
+	}
+
+	.card-link {
+		margin: 3px 0 3px 5px;
+	}
+}

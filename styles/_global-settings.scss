@@ -1,13 +1,20 @@
 /* Colors */
 
-$jet: #312F2F;
-$platinum: #DEE5E5;
-$light-blue: #A6D9F7;
-$pale-aqua: #BCCCE0;
-$middle-blue-green: #84DCCF; 
-$awesome: #FF1053;
+$jet: #312f2f;
+$platinum: #dee5e5;
+$light-blue: #a6d9f7;
+$pale-aqua: #bccce0;
+$middle-blue-green: #84dccf;
+$awesome: #ff1053;
 
 /* Fonts */
 
-$primary-font: "Open Sans", sans-serif; 
+$primary-font: 'Open Sans', sans-serif;
 
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-between;
+}
