@@ -10,9 +10,21 @@ module.exports = knex => {
     knex
       .select("*")
       .from("resources")
+      // .where("user_id", user_id)
+      // dataHelpers.resourcesForUser(req.session.user_id)
       .then(results => {
         res.json(results);
       });
+  });
+
+  router.get("/mine", (req, res) => {
+    // knex
+    //   .select("*")
+    //   .from("resources")
+    // .where("user_id", user_id)
+    dataHelpers.resourcesForUser(req.session.user_id).then(results => {
+      res.json(results);
+    });
   });
 
   // GET Resource Detail Page

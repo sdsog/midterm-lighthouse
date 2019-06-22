@@ -55,7 +55,7 @@ app.use("/resource", resourceRoutes(knex));
 
 // Home page
 app.get("/", (req, res) => {
-  res.render("index", { id: req.session.user_id, list: [] });
+  res.render("index", { id: req.session.user_id });
 });
 
 app.listen(PORT, () => {
