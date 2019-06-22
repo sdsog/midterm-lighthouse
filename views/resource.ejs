@@ -26,15 +26,23 @@
             <% include ./partials/_nav-bar %>
         </div>
 
+          <br/><br/><br/><br/><br/><br/>
 
 
 
-
-            <ul><li><%= url %></li>
-              <li><%= title %></li>
-              <li><%= description %></li>
-              <li><%= favicon %></li>
-              <li><%= user_id %></li></ul>
+            <ul style="list-style-type: none;"><li>URL - <%= url %></li>
+              <li>Title - <%= title %></li>
+              <li>Description  - <%= description %></li>
+              <img src="<%= favicon %>">
+              <li>User ID - <%= user_id %></li></ul>
+              <br/>
+              <form>
+                <div class="form-group">
+                  <label for="commentInput">Comment</label>
+                  <input type="text" class="commentForm" id="commentForm" placeholder="Please leave a comment">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
 
 
     
