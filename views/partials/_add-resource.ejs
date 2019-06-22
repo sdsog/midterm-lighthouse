@@ -2,33 +2,56 @@
 
 <div id="add-resource">
 
-  <div class="line"></div>
+<div class="resource-box">
+
+    <div class="row">
+        <div class="col-4">
+        <h2>Found Something Good?</h2>
+        <p>Add it here and we'll save it to your collection. Plus we'll share it with your fellow learners.</p>
+        </div>
+
+        <div class="col-8">
+
+          <div class ="add-resource-input">
+
+    
+                <form method="POST" action="api/resources/">
+                
+                  <div class="form-group">
+                    
+                    <input type="title" class="form-control resource-form" 
+                      placeholder="Enter Title" name="title">
+                  </div>
+                
+                  <div class="form-group">
+                   
+                    <input type="text" class="form-control resource-form" 
+                      placeholder="Enter URL" name="url">
+                  </div>
+                
+                  <div class="form-group">
+             
+                    <input type="description" class="form-control resource-form" 
+                      placeholder="Enter description" name="description">
+                  </div>
+                
+                  <button type="submit" class="btn btn-primary btn-lg btn-block submit-resource">Create Resource</button>
+                </form>
+                
+                </div>
+
+              </div>
 
 
-<h2 class="text-center">Add a Resource</h2>
+     
+      </div>
 
 
-<form method="POST" action="api/resources/">
 
-  <div class="form-group">
-    <label>TITLE</label>
-    <input type="title" class="form-control" 
-      placeholder="Title" name="title">
-  </div>
 
-  <div class="form-group">
-    <label>URL</label>
-    <input type="text" class="form-control" 
-      placeholder="Enter url" name="url">
-  </div>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">DESCRIPTION</label>
-    <input type="description" class="form-control" 
-      placeholder="Enter description" name="description">
-  </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
+</div>
 
 </div>

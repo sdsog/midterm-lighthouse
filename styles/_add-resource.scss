@@ -1,4 +1,53 @@
 #add-resource {
-	width: 80%;
-	margin: 20px auto;
+	width: 70%;
+	margin: 50px auto 10px auto;
+	height: 400px;
+	flex: none;
+}
+
+#add-resource {
+	.resource-box {
+		padding: 40px 40px;
+		border-radius: 10px;
+		background-color: $platinum;
+		border: 1px solid $platinum;
+	}
+
+	h2 {
+		margin-top: 0;
+		font-size: 23px;
+		color: $jet;
+	}
+
+	p {
+		font-weight: 300;
+		font-size: 14px;
+	}
+
+	.add-resource-header {
+		display: block;
+		flex: none;
+
+		background-color: green;
+		padding: 0;
+		margin: 0;
+	}
+
+	.add-resource-input {
+		display: block;
+		flex: none;
+	}
+}
+
+.add-resource-input {
+	.submit-resource {
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.resource-form {
+		font-weight: 300;
+		font-size: 14px;
+		color: $jet;
+	}
 }
