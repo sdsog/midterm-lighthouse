@@ -51,6 +51,11 @@ app.use(express.static("public"));
 app.use("/api/users", usersRoutes(knex));
 app.use("/api/resources", resourceRoutes(knex));
 app.use("/resource", resourceRoutes(knex));
+
+
+
+
+
 // app.use("/api/users");
 
 // Home page

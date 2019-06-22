@@ -28,9 +28,14 @@
 
           <br/><br/><br/><br/><br/><br/>
 
+          <div id="test">
+            <span id="comments"></span>
+            <input type="hidden" val="<%=id%>" id="resourceid" name="resourceid">
+          </div>
 
 
             <ul style="list-style-type: none;"><li>URL - <%= url %></li>
+              
               <li>Title - <%= title %></li>
               <li>Description  - <%= description %></li>
               <img src="<%= favicon %>">
@@ -42,8 +47,14 @@
                   <input type="text" class="commentForm" id="commentForm" placeholder="Please leave a comment">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                <br/>
+               
+                
               </form>
 
+
+
+             
 
     
 
