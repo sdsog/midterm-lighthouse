@@ -1,99 +1,55 @@
-// COLOR PALETTE FOR REFENCE: 
+// COLOR PALETTE FOR REFENCE:
 
 // $jet: #312F2F;
 // $platinum: #DEE5E5;
 // $light-blue: #A6D9F7;
 // $pale-aqua: #BCCCE0;
-// $middle-blue-green: #84DCCF; 
+// $middle-blue-green: #84DCCF;
 // $awesome: #FF1053;
-
-
-
-
-
-.box {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 35px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
+.resource-page-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
 }
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid $jet;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background:$jet;
+.resource-title {
+	line-height: 1;
+	padding: 0;
+	margin-bottom: 10px;
+	margin: 0;
+	color: $jet;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+.created-by {
+	padding-top: 2px;
+	font-size: 14px;
 }
 
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
+.resource-url {
+	margin-top: 10px;
+	font-weight: 300;
+	margin-bottom: 12px;
+}
+.hack {
+	margin-top: 50px;
 }
 
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: $primary-font;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: $jet;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
+.commentForm {
+	width: 100%;
+	height: 100px;
+	text-align: top;
+	padding-bottom: 10px;
+	text-align: top;
 }
 
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
+.comment-prompt {
+	font-size: 1.5mv;
+	font-weight: 300;
+	padding: 0;
+	margin: 0;
 }
 
-#resource-container {
-  width: 100%;
+.size-box {
+	margin-right: 40px;
 }
