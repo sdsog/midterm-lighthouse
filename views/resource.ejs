@@ -33,14 +33,14 @@
       <div class="container""> 
 
 <div class="row">
-        <div class="col">
+        <div class="col-6">
 
             <img src="<%= favicon %>">
-            <p><a href="#">Back to all collections</a></p>
+            <p><a href="/" class="mt-10">< Back to all collections</a></p>
 
         </div>
   
-        <div class="col">
+        <div class="col-6">
         
 
             <ul class="resource-page-list">
@@ -60,7 +60,7 @@
               <div class="rating-form">
                   <form class="rate" action="/api/engagements/rating" method="POST">
                     <button
-                      class="rate-button btn btn-success"
+                      class="rate-button btn-sm btn-success btn-secondary submit-comment" style="margin-left: 5px;margin-top:7px"
                       type="submit"
                       name="rate"
                     >
@@ -110,7 +110,7 @@
               />
               <button
                 type="submit"
-                class="btn btn-primary mt-3"
+                class="btn btn-primary btn-lg btn-block submit-comment"
                 name="comment"
               >
                 Submit
@@ -122,18 +122,13 @@
                 <span id="comments"></span>
                 <input type="hidden" val="<%=id%>" id="resourceid" name="resourceid">
               </div>
-         
-             
-
-
-
-          
-          </div>
-  
-
 
 </div>
+
 </div>
+
+
+
 
 
 

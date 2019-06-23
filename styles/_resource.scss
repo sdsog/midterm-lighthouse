@@ -40,6 +40,7 @@
 	height: 100px;
 	text-align: top;
 	padding-bottom: 10px;
+	margin-bottom: 10px;
 	text-align: top;
 }
 
@@ -60,15 +61,31 @@
 }
 
 #comment-box {
+	margin-top: 0;
+}
+
+#comment-box {
 	.comments {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		padding: 10px 0 10px 10px;
+		border-top: $platinum solid 1px;
 	}
 
 	.comments-username {
 		margin: 0;
 		font-size: 12px;
+		font-weight: 300;
+		margin-bottom: 2px;
+		color: $platinum;
 	}
 
 	.comments-body {
-		font-size: 18px;
+		font-size: 16px;
+		color: $jet;
 	}
+}
+
+.submit-comment {
+	font-weight: 300;
 }

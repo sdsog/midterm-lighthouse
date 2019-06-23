@@ -21,7 +21,7 @@ function createComment(comment) {
 
 	const newComment = $("<div class='comments'>");
 	$("<p class='comments-username'>")
-		.text('User: ' + username)
+		.text(`posted by: ${username}`)
 		.appendTo(newComment);
 	$("<p class='comments-body'>")
 		.text(comment.comment)
