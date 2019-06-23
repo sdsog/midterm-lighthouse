@@ -90,8 +90,7 @@
 
               <form
               class="form-group hack comment"
-              action="/api/engagements/comment"
-              method="POST"
+          
             >
               <label for="commentInput" class="comment-prompt"
                 ><p>Any thoughts to share?</p></label
@@ -117,6 +116,15 @@
                 Submit
               </button>
             </form>
+
+
+            <div id="comment-box">
+                <span id="comments"></span>
+                <input type="hidden" val="<%=id%>" id="resourceid" name="resourceid">
+              </div>
+         
+             
+
 
 
           

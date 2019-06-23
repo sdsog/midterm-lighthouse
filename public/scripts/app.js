@@ -1,12 +1,10 @@
-function createResource(resourceData) {
-	console.log(resourceData);
-	let $url = resourceData.url;
+function createResource(resourceData) {	let $url = resourceData.url;
 	let $id = resourceData.id;
-	console.log($id);
+
 	let newResource = $("<div class='card'>");
 	$(`<img class="card-img">`)
 		.attr('src', resourceData.favicon)
-		.appendTo(newResource);
+		.prependTo(newResource);
 
 	let $cardBody = $("<span class='card-body'>").appendTo(newResource);
 	$("<h5 class='card-title'>")
@@ -28,13 +26,17 @@ function getResources(isMine) {
 		method: 'GET',
 		url: url,
 	}).done(resources => {
-		console.log(resources);
+	
 		for (resource of resources) {
 			const currentResource = createResource(resource);
-			currentResource.appendTo($(id));
+			currentResource.prependTo($(id));
 		}
 	});
 }
+
+// function getComments(resourceID) {
+//   let url = /api/engagements/
+// }
 
 $(() => {
 	getResources(false);
