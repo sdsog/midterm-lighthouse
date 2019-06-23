@@ -17,6 +17,15 @@
 	z-index: 1;
 }
 
+.dark-font-button {
+	color: $jet;
+	font-weight: 300;
+}
+
+.dark-font-button:hover {
+	color: $middle-blue-green;
+}
+
 .navbar {
 	#user-nav-box {
 		position: fixed;
@@ -49,13 +58,32 @@
 #logo-container {
 	.logo-box {
 		position: relative;
-		background-color: $platinum;
-		width: 150px;
-		height: 150px;
-		margin: -75px auto 0 auto;
+		background-color: $middle-blue-green;
+		width: 100px;
+		height: 100px;
+		margin: -30px auto 0 auto;
 		z-index: 200;
-		border-radius: 100px;
-		border: $pale-aqua solid 9px;
+		border-bottom-left-radius: 100px;
+		border-bottom-right-radius: 100px;
+
+		border: $platinum solid 2px;
 		box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.6);
+		margin-bottom: 20px;
+	}
+}
+
+.s-logo {
+	margin-top: -16px;
+
+	text-align: center;
+	color: $jet;
+}
+
+.s-logo {
+	p {
+		font-family: 'Monoton', cursive !important;
+		font-size: 5em;
+		color: $jet;
+		text-shadow: 2px 2px $jet;
 	}
 }

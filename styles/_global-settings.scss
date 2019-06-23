@@ -18,3 +18,7 @@ $primary-font: 'Roboto', sans-serif;
 	justify-content: center;
 	align-content: space-between;
 }
+
+.wrapper {
+	background-image: repeating-linear-gradient /(white, $platinum, 20%);
+}
