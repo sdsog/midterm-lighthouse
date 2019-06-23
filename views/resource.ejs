@@ -10,8 +10,6 @@
 
 <body>
 
-
-
   <div class="wrapper">
     <!-- Sidebar Holder -->
     <div id="sliding-sidebar">
@@ -19,7 +17,8 @@
     </div>
 
     <!-- Page Content Holder -->
-    <div id="resource-content">
+    <div id="content" style="margin: 0 auto; width:100%">
+    <!-- <div id="resource-content"> -->
 
         <div id="top-nav">
             <% include ./partials/_nav-bar %>
@@ -31,17 +30,18 @@
         <input type="hidden" val="<%=id%>" id="resourceid" name="resourceid">
       </div>
 
-    <div class="container-fluid">
+      <div class="container""> 
 
-    <div class="row">
+<div class="row">
+        <div class="col">
 
-        <div class="col-4">
             <img src="<%= favicon %>">
             <p><a href="#">Back to all collections</a></p>
+
         </div>
   
-  
-        <div class="col-8">
+        <div class="col">
+        
 
             <ul class="resource-page-list">
                 <li><h1 class="resource-title pb-1"><%= title %></h1></li>
@@ -122,123 +122,11 @@
           
           </div>
   
-  
-  
-      </div>
-
-      </div>
-        <!-- <ul style="list-style-type: none;">
-          <li>URL - <a href="<%= url %>"><%= url %></a></li>
-          <li>Title - <%= title %></li>
-          <li>Description  - <%= description %></li>
-          <img src="<%= favicon %>">
-          <li>User ID - <%= user_id %></li>
-        </ul>
-        <br/> -->
-
-        <!-- <div class="comment-form">
-          <form class="form-group comment" action="/engagements" method="POST">
-            <label for="commentInput">Comment</label>
-            <input type="hidden" value="<%=id%>" id="resourceid" name="resourceid">
-            <input type="text" class="commentForm" id="commentForm" name="comment" placeholder="Please leave a comment">
-            <button type="submit" class="btn btn-primary" name="comment">Submit</button>
-          </form> -->
 
 
+</div>
+</div>
 
-      <!-- Sidebar Holder -->
-   
-      <!-- Page Content Holder -->
- 
-
-        <!-- <div id="test">
-          <span id="comments"></span>
-          <input
-            type="hidden"
-            val="<%=id%>"
-            id="resourceid"
-            name="resourceid"
-          />
-        </div> -->
-        <!-- <div class="row">
-          <div class="col-4">
-            <img src="<%= favicon %>" />
-          </div>
-          <div class="col-8">
-            <ul class="resource-page-list">
-              <li><h1 class="resource-title pb-1"><%= title %></h1></li>
-              <li>
-                <a href="<%= url %>" class="resource-url mb-0"><%= url %></a>
-              </li>
-              <li>
-                <p class="created-by">
-                  Created on <%= user_id %>3/<%= user_id %>4/2<%= user_id %>
-                </p>
-              </li>
-              <li><p class="resource-description"><%= description %></p></li>
-            </ul> -->
-
-            <!-- <div class="comment-form"> -->
-             
- 
-
-
-                 
-              
-                    
-            
-
-
-
-              <!-- <div class="col-8">
-                  
-               <ul class="resource-page-list"> 
-              <li ><h1 class="resource-title pb-1"><%= title %></h1></li>
-              <li><a href="<%= url %>" class="resource-url mb-0"><%= url %></a></li>
-              <li><p class="created-by">Created on <%= user_id %>3/<%= user_id %>4/2<%= user_id %></p></li>
-
-
-              <li><p class="resource-description"><%= description %></p> </li>
-              
-              </li></ul>
-       
-              <form>
-                  <div class="form-group hack">
-                    <label for="commentInput" class="comment-prompt"><p>Any thoughts to share?</p></label>
-                    <input type="text" class="commentForm form-control size-box" id="commentForm" placeholder="Please leave a comment">
-                    
-                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                  </div>
-                  <br/> -->
-                
-
-                  
-          <!-- </form>
-
-              </div>
-
-         
-            
-              </div> -->
-    
-
-        <!-- <div class="rating-form">
-            <form class="rate" action="/engagements" method="POST">
-              <button class="rate-button btn btn-success" type="submit" name="rate">Rate</button>
-              <input type="hidden" value="<%=id%>" id="resourceid" name="resourceid">
-              <input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text">5 stars</label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text">4 stars</label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text">3 stars</label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text">2 stars</label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text">1 star</label>
-            </form>
-          </div> -->
-  </div>
 
 
 
@@ -247,5 +135,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+ 
   </body>
 </html>
