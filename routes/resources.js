@@ -15,23 +15,17 @@ module.exports = knex => {
       });
   });
 
-  router.get("/test/:id", (req,res) => {
+  router.get("/test/:id", (req, res) => {
     let id = parseInt(req.params.id);
-    console.log("type of ",typeof(id));
+    console.log("type of ", typeof id);
     knex
-    .select("*")
-    .from("engagements")
-    .where('resource_id',id)
-    .then((result)=>{
-      res.json(result);
-  
-    })
+      .select("*")
+      .from("engagements")
+      .where("resource_id", id)
+      .then(result => {
+        res.json(result);
+      });
   });
-
-
-
-
-
 
   router.get("/mine", (req, res) => {
     dataHelpers.resourcesForUser(req.session.user_id).then(results => {
@@ -45,7 +39,6 @@ module.exports = knex => {
     dataHelpers
       .renderResource(resourceId)
       .then(result => {
-        console.log("resource found:", result);
         res.render("resource", result);
       })
       .catch(error => {
@@ -59,7 +52,7 @@ module.exports = knex => {
       title: req.body.title,
       url: req.body.url,
       description: req.body.description,
-      user_id: req.session.user_id,
+      user_id: req.session.user_id
     };
 
     dataHelpers
