@@ -20,6 +20,7 @@
 	font-size: 1vw;
 	margin: 0.8vw 0.8vw 1.6vw 0.8vw;
 	color: $jet;
+	padding-bottom: 2.5vw;
 }
 
 .card:hover {
@@ -27,32 +28,35 @@
 }
 
 .card-img {
-	height: 15vw;
+	height: 10vw;
 	object-fit: cover;
 }
 
-.card-link {
-	display: block;
-	bottom: 0;
-	width: 40%;
-	margin: 0.2vw 0.8vw 1.6vw 0.2vw;
+.card-body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .card-footer {
 	display: block;
-	height: 20%;
+	height: 10%;
 	padding: 0.2vw 0.8vw 1.6vw 0.2vw;
-	position: absolute;
 	bottom: 0;
 	width: 100%;
+	color: $platinum;
 }
 
 .visit-site {
 	position: inline-block;
 	right: 0;
-	padding-right: 1vw;
+	margin-right: 1vw;
 	width: 50%;
-	font-size: 0.9vw;
+	font-size: 0.8vw;
+	text-transform: uppercase;
+	color: $middle-blue-green;
+	margin-left: 10px;
+	font-weight: 400;
 }
 
 .more-details {
@@ -60,5 +64,9 @@
 	left: 0;
 	padding-left: 0.8vw;
 	width: 50%;
-	font-size: 0.9vw;
+	font-size: 0.8vw;
+	text-transform: uppercase;
+	color: $middle-blue-green;
+	margin-left: 5px;
+	font-weight: 400;
 }
