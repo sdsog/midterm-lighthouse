@@ -59,7 +59,16 @@
 	width: 100%;
 }
 
- #comment-box {
-  
+#comment-box {
+	.comments {
+	}
 
- }
+	.comments-username {
+		margin: 0;
+		font-size: 12px;
+	}
+
+	.comments-body {
+		font-size: 18px;
+	}
+}
