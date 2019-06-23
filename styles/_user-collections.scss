@@ -9,37 +9,17 @@
 
 #my-resources-container {
 	width: 80%;
-	margin: 0 auto;
+	margin: 10px auto 40px auto;
 }
 
-#my-resources-container {
-	h1 {
+.my-resources-header {
+	margin: 100px auto 10px auto;
+	width: 80%;
+}
+
+.my-resources-header {
+	.user-header h2 {
 		text-align: center;
-	}
-
-	.card {
-		margin: 5px;
-		width: 30%;
-		height: 180px;
-	}
-
-	.card-title {
-		margin: 3px 0 3px 5px;
-	}
-
-	.card-text {
-		margin: 3px 0 3px 5px;
-	}
-
-	.card:hover {
-		box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.81);
-	}
-
-	.card-img {
-		display: none;
-	}
-
-	.card-link {
-		margin: 3px 0 3px 5px;
+		font-size: 3mv;
 	}
 }

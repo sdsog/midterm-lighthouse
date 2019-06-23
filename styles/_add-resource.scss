@@ -1,13 +1,12 @@
 #add-resource {
 	width: 70%;
-	margin: 50px auto 10px auto;
+	margin: 40px auto;
 	height: 400px;
-	flex: none;
 }
 
 #add-resource {
 	.resource-box {
-		padding: 40px 40px;
+		padding: 40px;
 		border-radius: 10px;
 		background-color: $platinum;
 		border: 1px solid $platinum;
@@ -27,8 +26,6 @@
 	.add-resource-header {
 		display: block;
 		flex: none;
-
-		background-color: green;
 		padding: 0;
 		margin: 0;
 	}
@@ -42,7 +39,7 @@
 .add-resource-input {
 	.submit-resource {
 		font-size: 18px;
-		font-weight: 500;
+		font-weight: 400;
 	}
 
 	.resource-form {

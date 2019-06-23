@@ -1,17 +1,18 @@
 // GLOBAL SETTINGS FOR FONT AND COLORS
-@import "global-settings.scss";
+@import 'global-settings.scss';
 
 // SKELETON
-@import "skeleton-main.scss";
-@import "sliding-sidebar.scss";
+@import 'skeleton-main.scss';
+@import 'sliding-sidebar.scss';
+@import 'card-styling.scss';
 
 // LOGGED IN STATES
-@import "manage-resource.scss";
-@import "add-resource.scss";
-@import "account-settings.scss";
-@import "user-collections.scss";
+@import 'manage-resource.scss';
+@import 'add-resource.scss';
+@import 'account-settings.scss';
+@import 'user-collections.scss';
 
 // NOT LOGGED IN STATE: shows all tweets
-@import "all-collections.scss";
-@import "resource.scss";
-@import "nav-bar.scss";
+@import 'all-collections.scss';
+@import 'resource.scss';
+@import 'nav-bar.scss';
