@@ -6,7 +6,7 @@ const dataHelpers = require("../data-helpers/data-helpers");
 
 module.exports = knex => {
   //POST New Rating
-  router.post("/", (req, res) => {
+  router.post("/rating", (req, res) => {
     const newRating = {
       rating: req.body.rate,
       user_id: req.session.user_id,
@@ -14,12 +14,12 @@ module.exports = knex => {
     };
     console.log(newRating);
     dataHelpers.saveRating(newRating).then(result => {
-      res.end("it worked!");
+      res.send(result);
     });
   });
 
   //POST New Comment
-  router.post("/", (req, res) => {
+  router.post("/comment", (req, res) => {
     const newComment = {
       comment: req.body.comment,
       user_id: req.session.user_id,
@@ -27,7 +27,7 @@ module.exports = knex => {
     };
     console.log(newComment);
     dataHelpers.saveComment(newComment).then(result => {
-      res.end("it worked!");
+      res.send(result);
     });
   });
   return router;

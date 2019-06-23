@@ -8,7 +8,7 @@ $(document).ready(function(e) {
     $(".rate input").val("");
     $.ajax({
       method: "POST",
-      url: "/engagements",
+      url: "/api/engagements/rating",
       data: data,
       dataType: "text",
       success: function(result) {
@@ -27,7 +27,7 @@ $(document).ready(function(e) {
     $(".comment input").val("");
     $.ajax({
       method: "POST",
-      url: "/engagements",
+      url: "/api/engagements/comment",
       data: data,
       dataType: "text",
       success: function(result) {

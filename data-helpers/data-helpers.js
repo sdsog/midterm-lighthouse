@@ -25,11 +25,15 @@ const dataHelpers = {
   },
 
   saveRating: function(newRating) {
-    return knex("engagements").insert(newRating);
+    return knex("engagements")
+      .returning(["id", "rating"])
+      .insert(newRating);
   },
 
   saveComment: function(newComment) {
-    return knex("engagements").insert(newComment);
+    return knex("engagements")
+      .returning(["id", "comment"])
+      .insert(newComment);
   }
 };
 
