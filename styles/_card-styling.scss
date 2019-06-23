@@ -6,11 +6,11 @@
 .card-title {
 	display: block;
 	width: 100%;
-	height: 3vw;
+	min-height: 3vw;
 	margin: 0;
 	background-color: $platinum;
 	color: $jet;
-	padding: 0.8vw 0 0 0.8vw;
+	padding: 0.8vw 0 0.8vw 0.8vw;
 	font-size: 1.2vw;
 	border-bottom: 2px solid $middle-blue-green;
 }

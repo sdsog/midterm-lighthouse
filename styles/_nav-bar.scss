@@ -34,4 +34,28 @@
 		float: right;
 		margin-right: 80px;
 	}
+
+	navbar.navbar-default {
+		flex: none;
+	}
+}
+
+#logo-container {
+	width: 100%;
+	position: relative;
+	right: 0;
+}
+
+#logo-container {
+	.logo-box {
+		position: relative;
+		background-color: $platinum;
+		width: 150px;
+		height: 150px;
+		margin: -75px auto 0 auto;
+		z-index: 200;
+		border-radius: 100px;
+		border: $pale-aqua solid 9px;
+		box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.6);
+	}
 }
