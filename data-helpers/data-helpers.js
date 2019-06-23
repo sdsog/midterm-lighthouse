@@ -7,15 +7,13 @@ const dataHelpers = {
     return knex("resources")
       .returning("id")
       .insert(newResource);
-
   },
 
   resourcesForUser: function(user_id) {
-   return knex
-    .select("*")
-    .from("resources")
-    .where("user_id", user_id);
-
+    return knex
+      .select("*")
+      .from("resources")
+      .where("user_id", user_id);
   },
 
   renderResource: function(resourceId) {
@@ -25,6 +23,14 @@ const dataHelpers = {
       .where("id", resourceId)
       .first(10);
   },
+
+  saveRating: function(newRating) {
+    return knex("engagements").insert(newRating);
+  },
+
+  saveComment: function(newComment) {
+    return knex("engagements").insert(newComment);
+  }
 };
 
 module.exports = dataHelpers;

@@ -1,0 +1,237 @@
+CREATE DATABASE test_db:
+\c test_db:
+CREATE DATABASE test_db;
+CREATE DATABASE test_db;
+\c test_db;
+CREATE TABLE famous_people (id BIGSERIAL PROMARY KEY, first_name VARCHAR(50), last_name VARCHAR(50). birthdate DATE);
+CREATE TABLE famous_people (
+  id BIGSERIAL PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  birthdate DATE
+);
+INSERT INTO famous-people (first_name, last_name, birthdate)
+VALUES ('Abraham', 'Lincoln', '1809-02-12');
+INSERT INTO famous_people (first_name, last_name, birthdate)
+  VALUES ('Abraham', 'Lincoln', '1809-02-12');
+INSERT INTO famous_people (first_name, last_name, birthdate)
+  VALUES ('Mahatma', 'Gandhi', '1869-10-02');
+INSERT INTO famous_people (first_name, last_name, birthdate)
+  VALUES ('Paul', 'Rudd', '1969-04-06');
+INSERT INTO famous_people (first_name, last_name, birthdate)
+  VALUES ('Paul', 'Giamatti', '1967-06-06');
+SELECT * FROM famous_people;
+SELECT * FROM famous_people WHERE birthdate >= '1920-01-01';
+SELECT * FROM famous-people WHERE birthdate < '1920-01-01';
+SELECT * FROM famous_people WHERE birthdate < '1920-01-01';
+q
+\q
+psql < navy_schema.sql
+\q
+CREATE DATABASE navy_db:
+\c navy_db;
+CREATE DATABASE navy_db;
+\c navy_db;
+CREATE DATABASE navy_db;
+\c navy_db;
+\d
+\d fleets
+navy_schema.sql
+psql
+psql < navy_schema.sql
+psql < navy_schema.sql
+\i navy_schema.sql
+\i navy_schema.sql 
+\i navy_schema.sql 
+\i navy_schema.sql 
+\d 
+\d fleets
+\i navy_schema.sql 
+\d
+\d sailors
+\d assignments
+clear
+psql
+\?
+\?
+\l
+\l
+create database test;
+psql \\help
+psql\\help
+psql//help
+\q
+CREATE DATABASE test
+CREATE DATABASE test;
+\l
+CREATE DATABASE test;
+\l
+psql --help
+psql --help
+psql help
+help
+\help
+psql
+ls
+\l
+"help"
+help
+psql help
+psql --help
+psql --"help"
+\q
+\l
+\c test
+CREATE TABLE person (
+ id INT,
+ first_name VARCHAR(50),
+ last_name VARCHAR(50),
+ gender VARCHAR(7),
+ date_of_birth DATE );
+\d
+\d person
+\d
+CREATE TABLE person (
+id BIGSERIAL NOT NULL PRIMARY KEY,
+first-name VARCHAR(50),
+last_name VARCHAR(50),
+gender VARCHAR(7) NOT NULL );
+CREATE TABLE person (
+id BIGSERIAL NOT NULL PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+gender VARCHAR(7) NOT NULL );
+\d
+\d person
+\q
+\l
+\c navy_db
+\d
+\d fleet
+\d fleets
+\d fleet
+\d fleets
+psql < navy_schema.sql
+\d fleet
+\d fleets
+\d sailors
+\q
+\l
+\c test
+\d person
+INSERT INTO person (
+first_name,
+last_name,
+gender,
+date_of_birth
+)
+VALUES ('Jake', 'Jones', 'MALE', DATE '1990-01-10');
+INSERT INTO person (
+first_name,
+last_name,
+gender
+) 
+VALUES ('Jake', 'Jones', 'MALE');
+DROP TABLE person
+DROP TABLE person;
+\l
+DROP TABLE person;
+CREATE TABLE person (
+id BIGSERIAL NOT NULL PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+gender VARCHAR(7) NOT NULL,
+date_of_birth DATE NOT NULL,
+email VARCHAR(150) );
+\?
+\i /Users/nolan/Downloads/person.sql
+\i /Users/nolan/Downloads/person.sql
+\d person
+DROP TABLE person;
+\d
+\i /Users/nolan/Downloads/person.sql
+\i /Users/nolan/Documents/lighthouse/week_4/postgreSQL_practice/person.sql
+\i lighthouse/week_4/postgreSQL_practice/person.sql
+\i /Users/nolan/Documents/lighthouse/week_4/postgreSQL_practice/person.sql
+\i person.sql
+\q
+\c test_db:
+\c test_db;
+\q
+\c test_db
+\d milestones
+knew migrate:rollback
+\d
+\d milestones
+\q
+\c test_db
+\d milestones
+q\
+\q
+\c test_db
+\d milesstones
+\d milestones
+\q
+\c text_db
+\c test_db
+\d add_famous_person_id_to_milestones
+-d
+\d
+\q
+\c test_db
+\d 
+\d milestones
+\q
+CREATE ROLE labber WITH LOGIN password 'labber';
+CREATE DATABASE midterm OWNER labber;
+\q
+\d
+\dt
+\c midterm
+\dt
+\q
+drop table users
+\dt
+drop table users:
+drop table users;
+drop table users;
+\q
+\dt
+delete from migrations;
+\q
+\dt
+\q
+\dt
+drop table categories;
+\dt
+drop table collections, engagements, joinTable, resources, migrations, users;
+\dt
+drop table collections;
+drop table collections, engagements, joinTable, resources, migrations, users cascade;
+drop table jointable;
+drop table joinTable;
+drop table "joinTable";
+\dt
+drop table collections, engagements, migrations, resources, users;
+\dt
+knex migrate:rollback --all
+\dt
+knex migrate:lastest;
+\q
+\dt
+\q
+\c midterm
+\dt
+drop table categories, collections, engagements, "joinTable", migrations, resources, users;
+\dt
+\q
+\dt
+\q
+\dt
+\q
+\dt
+\d resources
+\q
+\c 
+\dt
+\s engagements
