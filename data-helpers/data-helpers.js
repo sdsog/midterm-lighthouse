@@ -7,13 +7,7 @@ const dataHelpers = {
     return knex("resources")
       .returning("id")
       .insert(newResource);
-    // .then(result => {
-    //   callback(null);
-    // })
-    // .catch(error => {
-    //   console.log(error);
-    //   callback(error);
-    // });
+
   },
 
   resourcesForUser: function(user_id) {
@@ -21,13 +15,7 @@ const dataHelpers = {
     .select("*")
     .from("resources")
     .where("user_id", user_id);
-    // .then(result => {
-    //   callback(null);
-    // })
-    // .catch(error => {
-    //   console.log(error);
-    //   callback(error);
-    // });
+
   },
 
   renderResource: function(resourceId) {
