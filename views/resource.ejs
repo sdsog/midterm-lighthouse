@@ -1,88 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- ALL SCRIPTS, STYLESHEETS ETC. -->
+    <% include ./partials/_scripts %>
 
-<head>
+    <title>Resource Manager</title>
+  </head>
 
-  <!-- ALL SCRIPTS, STYLESHEETS ETC. -->
-  <% include ./partials/_scripts %>
-
-  <title>Resource Manager</title>
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <!-- Sidebar Holder -->
-
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
       <div id="sliding-sidebar">
         <% include ./partials/_sliding-sidebar %>
       </div>
-
-    <!-- Page Content Holder -->
-    <div id="content" style="margin: 0 auto; width: 100%">
-
+      <!-- Page Content Holder -->
+      <div id="content" style="margin: 0 auto; width: 100%">
         <div id="top-nav">
-            <% include ./partials/_nav-bar %>
+          <% include ./partials/_nav-bar %>
         </div>
 
-       
-
-          <div id="test">
-            <span id="comments"></span>
-            <input type="hidden" val="<%=id%>" id="resourceid" name="resourceid">
+        <div id="test">
+          <span id="comments"></span>
+          <input
+            type="hidden"
+            val="<%=id%>"
+            id="resourceid"
+            name="resourceid"
+          />
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <img src="<%= favicon %>" />
           </div>
+          <div class="col-8">
+            <ul class="resource-page-list">
+              <li><h1 class="resource-title pb-1"><%= title %></h1></li>
+              <li>
+                <a href="<%= url %>" class="resource-url mb-0"><%= url %></a>
+              </li>
+              <li>
+                <p class="created-by">
+                  Created on <%= user_id %>3/<%= user_id %>4/2<%= user_id %>
+                </p>
+              </li>
+              <li><p class="resource-description"><%= description %></p></li>
+            </ul>
 
-          <div class="row">
+            <div class="comment-form">
+              <form
+                class="form-group hack comment"
+                action="/api/engagements/comment"
+                method="POST"
+              >
+                <label for="commentInput" class="comment-prompt"
+                  ><p>Any thoughts to share?</p></label
+                >
+                <input
+                  type="hidden"
+                  value="<%=id%>"
+                  id="resourceid"
+                  name="resourceid"
+                />
+                <input
+                  type="text"
+                  class="commentForm form-control size-box"
+                  id="commentForm"
+                  name="comment"
+                  placeholder="Please leave a comment"
+                />
+                <button
+                  type="submit"
+                  class="btn btn-primary mt-3"
+                  name="comment"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
 
+            <div class="rating-form">
+              <form class="rate" action="/api/engagements/rating" method="POST">
+                <button
+                  class="rate-button btn btn-success"
+                  type="submit"
+                  name="rate"
+                >
+                  Rate
+                </button>
+                <input
+                  type="hidden"
+                  value="<%=id%>"
+                  id="resourceid"
+                  name="resourceid"
+                />
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-              <div class="col-4">
-                  <img src="<%= favicon %>">
-              </div>
-                 
-              
-                    
-            
-
-
-
-              <div class="col-8">
-                  
-               <ul class="resource-page-list"> 
-              <li ><h1 class="resource-title pb-1"><%= title %></h1></li>
-              <li><a href="<%= url %>" class="resource-url mb-0"><%= url %></a></li>
-              <li><p class="created-by">Created on <%= user_id %>3/<%= user_id %>4/2<%= user_id %></p></li>
-
-
-              <li><p class="resource-description"><%= description %></p> </li>
-              
-              </li></ul>
-       
-              <form>
-                  <div class="form-group hack">
-                    <label for="commentInput" class="comment-prompt"><p>Any thoughts to share?</p></label>
-                    <input type="text" class="commentForm form-control size-box" id="commentForm" placeholder="Please leave a comment">
-                    
-                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                  </div>
-                  <br/>
-                
-
-                  
-          </form>
-
-              </div>
-
-         
-            
-              </div>
-    
-
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-
-
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+  </body>
 </html>

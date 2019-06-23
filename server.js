@@ -14,14 +14,15 @@ const knex = require("knex")(knexConfig[ENV]);
 const morgan = require("morgan");
 const knexLogger = require("knex-logger");
 
-// Seperated Routes for each Resource
+// Seperated Routes for Each Resource
 const usersRoutes = require("./routes/users");
 const resourceRoutes = require("./routes/resources");
+const engagementRoutes = require("./routes/engagements");
 const cookieSession = require("cookie-session");
 app.use(
   cookieSession({
     name: "user_id",
-    keys: ["user_id"],
+    keys: ["user_id"]
   })
 );
 // const loginRoutes = require("./routes/login");
@@ -42,7 +43,7 @@ app.use(
     src: __dirname + "/styles",
     dest: __dirname + "/public/styles",
     debug: true,
-    outputStyle: "expanded",
+    outputStyle: "expanded"
   })
 );
 app.use(express.static("public"));
@@ -51,12 +52,7 @@ app.use(express.static("public"));
 app.use("/api/users", usersRoutes(knex));
 app.use("/api/resources", resourceRoutes(knex));
 app.use("/resource", resourceRoutes(knex));
-
-
-
-
-
-// app.use("/api/users");
+app.use("/api/engagements", engagementRoutes(knex));
 
 // Home page
 app.get("/", (req, res) => {
@@ -66,7 +62,6 @@ app.get("/", (req, res) => {
 app.get("*", (req, res) => {
   res.redirect("/urls");
 });
-
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
