@@ -29,6 +29,25 @@
     <!-- ========  LOGGED IN STATE ========  -->
 
     <div class=flex-container"> 
+
+        <div class="container">
+            <div class="row">
+       
+              <div class="col">
+                  <div class=“search-container”>
+                      <form class=“form-group” action=“/api/resources/search” method=“GET”>
+                        <input type=“search” name=“query” placeholder="What would you like to learn about?" class="form-control form-control-lg" >
+                        <button type=“submit” class="btn btn-outline-primary">
+                            <span>Search</span>
+                        </button>
+                      </form>
+                    </div>
+              </div>
+          
+            </div>
+          </div>
+
+ 
     
         <% if(id){ %>
 
