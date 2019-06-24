@@ -36,6 +36,7 @@ module.exports = knex => {
 
 	// GET Resource Detail Page
 	router.get('/:id', (req, res) => {
+		const id = req.session.user_id;
 		const resourceId = req.params.id;
 		dataHelpers
 			.renderResource(resourceId)
@@ -54,6 +55,7 @@ module.exports = knex => {
 			url: req.body.url,
 			description: req.body.description,
 			user_id: req.session.user_id,
+			favicon: 'https://picsum.photos/417',
 		};
 
 		dataHelpers

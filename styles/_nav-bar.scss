@@ -85,5 +85,10 @@
 		font-size: 5em;
 		color: $jet;
 		text-shadow: 2px 2px $jet;
+		text-decoration: none;
+	}
+	.noblue {
+		text-decoration: none;
+		color: $jet;
 	}
 }

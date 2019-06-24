@@ -21,7 +21,7 @@ function createComment(comment) {
 
 	const newComment = $("<div class='comments'>");
 	$("<p class='comments-username'>")
-		.text(`posted by: ${username}`)
+		.text(`posted by user ${username} on 20${username}9/0${username}/${username}3 `)
 		.appendTo(newComment);
 	$("<p class='comments-body'>")
 		.text(comment.comment)

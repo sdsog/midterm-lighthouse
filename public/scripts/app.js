@@ -1,4 +1,5 @@
-function createResource(resourceData) {	let $url = resourceData.url;
+function createResource(resourceData) {
+	let $url = resourceData.url;
 	let $id = resourceData.id;
 
 	let newResource = $("<div class='card'>");
@@ -14,7 +15,7 @@ function createResource(resourceData) {	let $url = resourceData.url;
 		.text(resourceData.description)
 		.appendTo($cardBody);
 	var $footer = $("<div class='card-footer'>").appendTo(newResource);
-	$(`<a href="${$url}" class='visit-site'>Visit Site</a>`).appendTo($footer);
+	$(`<a href="${$url}" class='visit-site' target="_blank">Visit Site</a>`).appendTo($footer);
 	$(`<a href="/resource/${$id}" class='more-details'>More details</a>`).appendTo($footer);
 	return newResource;
 }
@@ -26,7 +27,6 @@ function getResources(isMine) {
 		method: 'GET',
 		url: url,
 	}).done(resources => {
-	
 		for (resource of resources) {
 			const currentResource = createResource(resource);
 			currentResource.prependTo($(id));
