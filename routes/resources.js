@@ -15,6 +15,10 @@ module.exports = knex => {
 			});
 	});
 
+	// router.get('/resource', (req, res) => {
+	// 	res.render('resource', { id: req.session.user_id });
+	// });
+
 	// GET COMMENTS AND LOADS ON
 	router.get('/:id/comments', (req, res) => {
 		let id = parseInt(req.params.id);

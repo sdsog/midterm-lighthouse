@@ -32,6 +32,7 @@
 
       <div class="container""> 
 
+
 <div class="row">
         <div class="col-6">
 
@@ -53,41 +54,45 @@
                     Created on <%= user_id %>3/<%= user_id %>4/2<%= user_id %>
                   </p>
                 </li>
-                <li><p class="resource-description"><%= description %></p></li>
-              </ul>
+
+              <li><div class="rating-form">
+                    <form class="rate" action="/api/engagements/rating" method="POST">
+                      <button
+                        class="rate-button btn-sm btn-success btn-secondary submit-comment" style="margin-left: 5px;margin-top:7px"
+                        type="submit"
+                        name="rate"
+                      >
+                        Rate
+                      </button>
+                      <input
+                        type="hidden"
+                        value="<%=id%>"
+                        id="resourceid"
+                        name="resourceid"
+                      />
+                      
+                      
+                      <input type="radio" id="star5" name="rate" value="5" />
+                      <label for="star5" title="text">5 stars</label>
+                      <input type="radio" id="star4" name="rate" value="4" />
+                      <label for="star4" title="text">4 stars</label>
+                      <input type="radio" id="star3" name="rate" value="3" />
+                      <label for="star3" title="text">3 stars</label>
+                      <input type="radio" id="star2" name="rate" value="2" />
+                      <label for="star2" title="text">2 stars</label>
+                      <input type="radio" id="star1" name="rate" value="1" />
+                      <label for="star1" title="text">1 star</label>
+                    </form>
+                  </li></ul>
+
+                <p id="resource-description"><%= description %></p>
+             
 
 
-              <div class="rating-form">
-                  <form class="rate" action="/api/engagements/rating" method="POST">
-                    <button
-                      class="rate-button btn-sm btn-success btn-secondary submit-comment" style="margin-left: 5px;margin-top:7px"
-                      type="submit"
-                      name="rate"
-                    >
-                      Rate
-                    </button>
-                    <input
-                      type="hidden"
-                      value="<%=id%>"
-                      id="resourceid"
-                      name="resourceid"
-                    />
-                    <input type="radio" id="star5" name="rate" value="5" />
-                    <label for="star5" title="text">5 stars</label>
-                    <input type="radio" id="star4" name="rate" value="4" />
-                    <label for="star4" title="text">4 stars</label>
-                    <input type="radio" id="star3" name="rate" value="3" />
-                    <label for="star3" title="text">3 stars</label>
-                    <input type="radio" id="star2" name="rate" value="2" />
-                    <label for="star2" title="text">2 stars</label>
-                    <input type="radio" id="star1" name="rate" value="1" />
-                    <label for="star1" title="text">1 star</label>
-                  </form>
-                </div>
 
               </br>
 
-
+              <% if(id){ %>
               <form
               class="form-group hack comment"
           
@@ -116,6 +121,8 @@
                 Submit
               </button>
             </form>
+
+            <% } %>
 
 
             <div id="comment-box">

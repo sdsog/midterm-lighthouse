@@ -59,6 +59,8 @@ app.get('/', (req, res) => {
 	res.render('index', { id: req.session.user_id });
 });
 
+
+
 app.get('/search-results', (req, res) => {
 	res.render('search-results', { id: req.session.user_id });
 });
