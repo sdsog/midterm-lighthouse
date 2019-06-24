@@ -34,6 +34,24 @@ const dataHelpers = {
     return knex("engagements")
       .returning(["id", "comment"])
       .insert(newComment);
+  },
+
+  searchResources: function(searchData) {
+    console.log(searchData);
+    return Promise.all(
+      searchData.map(queryTerm => {
+        return knex
+          .select("*")
+          .from("resources")
+          .whereRaw(`LOWER(title) like LOWER('%${queryTerm}%')`)
+          .orWhereRaw(`LOWER(description) like LOWER('%${queryTerm}%')`)
+          .orWhereRaw(`LOWER(url) like LOWER('%${queryTerm}%')`)
+          .then(result => {
+            console.log("data-helper", result);
+            return result;
+          });
+      })
+    );
   }
 };
 
