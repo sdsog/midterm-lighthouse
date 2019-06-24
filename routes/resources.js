@@ -41,9 +41,7 @@ module.exports = knex => {
   // GET Search Query
   router.get("/search", (req, res) => {
     let searchData = req.query.query;
-    console.log(searchData);
     searchData = searchData.split(" ");
-    console.log(searchData);
     dataHelpers
       .searchResources(searchData)
       .then(output => {
@@ -51,7 +49,7 @@ module.exports = knex => {
       })
       .catch(error => {
         res.json(error);
-        // res.status(404).send("resource not found");
+        res.status(404).send("resource not found");
       });
   });
 
