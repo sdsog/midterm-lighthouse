@@ -30,10 +30,6 @@
 
     <div class=flex-container"> 
 
-
-
- 
-    
         <% if(id){ %>
 
           <div id="add-resource">
@@ -60,18 +56,26 @@
  
     <div class="container">
 
+        <% if(id){ %>
+
+          <h2 class="text-center">All Collections</h2>
+          <p class="lead text-center">Explore More Resources</p>
+
+      <% } else { %>
+
         <h2 class="text-center">Curated Collections</h2>
         <p class="lead text-center">Find. Collect. Share.</p>
+
+      <% } %>
+
+
         
         <div class="row search-row">
 
-
-
-   
           <div class="col text-center">
-              <div class=“search-container”>
-                  <form class=“form-group” action=“/api/resources/search” method=“GET”>
-                    <input type=“search” name=“query” placeholder="Search..." class="form-control form-control-lg text-center" >
+              <div class="search-container">
+                  <form class="form-group">
+                    <input type="search" name="query" placeholder="Search..." class="form-control form-control-lg text-center" >
                     <!-- <button type=“submit” class="btn btn-outline-primary search-button">
                         <span>Search</span>
                     </button> -->

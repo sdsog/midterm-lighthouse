@@ -55,7 +55,7 @@ module.exports = knex => {
 			url: req.body.url,
 			description: req.body.description,
 			user_id: req.session.user_id,
-			favicon: 'https://picsum.photos/417',
+			favicon: 'https://source.unsplash.com/random/600x600',
 		};
 
 		dataHelpers

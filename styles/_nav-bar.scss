@@ -82,7 +82,8 @@
 .s-logo {
 	p {
 		font-family: 'Monoton', cursive !important;
-		font-size: 5em;
+		font-size: 4.3em;
+		margin-top: 6px;
 		color: $jet;
 		text-shadow: 2px 2px $jet;
 		text-decoration: none;
@@ -95,7 +96,7 @@
 
 .search-row {
 	width: 60%;
-	margin: 20px auto 20px auto;
+	margin: 10px auto 20px auto;
 }
 
 .search-button {
@@ -103,7 +104,10 @@
 }
 
 .text-center {
-  text-align: center;
-  font-weight: 300;
+	text-align: center;
+	font-weight: 300;
+}
 
+.search-container {
+	box-shadow: 0px 4px 6px -6px rgba(0, 0, 0, 0.41);
 }
