@@ -1,113 +1,124 @@
 .navbar {
-	position: fixed;
-	width: 100%;
-	height: 80px;
-	padding: 0px 2em;
-	z-index: 1;
-	top: 0;
-	right: 0;
-	left: 0;
-	padding-bottom: 40px;
-	background-color: $pale-aqua;
-	box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.81);
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding: 0px 2em;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 40px;
+  background-color: $pale-aqua;
+  box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.81);
 }
 
 #sidebarCollapse {
-	position: fixed;
-	z-index: 1;
+  margin-top: 20px;
+}
+
+.search-btn {
+  float: right;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  color: $middle-blue-green;
 }
 
 .dark-font-button {
-	color: $jet;
-	font-weight: 300;
+  color: $jet;
+  font-weight: 300;
 }
 
 .dark-font-button:hover {
-	color: $middle-blue-green;
+  color: $middle-blue-green;
 }
 
 .navbar {
-	#user-nav-box {
-		position: fixed;
-		width: 100%;
-		display: inline-block;
-		margin-right: 0;
-	}
+  #user-nav-box {
+    position: fixed;
+    width: 100%;
+    display: inline-block;
+    margin-right: 0;
+  }
 
-	.create-resource {
-		float: right;
-		margin-right: 10px;
-	}
+  .create-resource {
+    float: right;
+    margin-right: 10px;
+    margin-top: -35px;
+  }
 
-	.user-logout {
-		float: right;
-		margin-right: 80px;
-	}
+  .user-logout {
+    float: right;
+    margin-right: 80px;
+    margin-top: -35px;
+  }
 
-	navbar.navbar-default {
-		flex: none;
-	}
+  navbar.navbar-default {
+    flex: none;
+  }
 }
 
 #logo-container {
-	width: 100%;
-	position: relative;
-	right: 0;
+  width: 100%;
+  position: relative;
+  right: 0;
 }
 
 #logo-container {
-	.logo-box {
-		position: relative;
-		background-color: $middle-blue-green;
-		width: 100px;
-		height: 100px;
-		margin: -30px auto 0 auto;
-		z-index: 200;
-		border-bottom-left-radius: 100px;
-		border-bottom-right-radius: 100px;
+  .logo-box {
+    position: relative;
+    background-color: $middle-blue-green;
+    width: 100px;
+    height: 100px;
+    margin: -30px auto 0 auto;
+    z-index: 200;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 
-		border: $platinum solid 2px;
-		box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.6);
-		margin-bottom: 20px;
-	}
+    border: $platinum solid 2px;
+    box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+  }
 }
 
 .s-logo {
-	margin-top: -16px;
+  margin-top: -16px;
 
-	text-align: center;
-	color: $jet;
+  text-align: center;
+  color: $jet;
 }
 
 .s-logo {
-	p {
-		font-family: 'Monoton', cursive !important;
-		font-size: 4.3em;
-		margin-top: 6px;
-		color: $jet;
-		text-shadow: 2px 2px $jet;
-		text-decoration: none;
-	}
-	.noblue {
-		text-decoration: none;
-		color: $jet;
-	}
+  p {
+    font-family: "Monoton", cursive !important;
+    font-size: 4.3em;
+    margin-top: 6px;
+    color: $jet;
+    text-shadow: 2px 2px $jet;
+    text-decoration: none;
+  }
+  .noblue {
+    text-decoration: none;
+    color: $jet;
+  }
 }
 
 .search-row {
-	width: 60%;
-	margin: 10px auto 20px auto;
+  width: 60%;
+  margin: 10px auto 20px auto;
 }
 
 .search-button {
-	margin: 10px auto 0 auto;
+  margin: 10px auto 0 auto;
 }
 
 .text-center {
-	text-align: center;
-	font-weight: 300;
+  text-align: center;
+  font-weight: 300;
 }
 
 .search-container {
-	box-shadow: 0px 4px 6px -6px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 4px 6px -6px rgba(0, 0, 0, 0.41);
 }

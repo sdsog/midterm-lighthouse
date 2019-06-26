@@ -7,99 +7,102 @@
 // $middle-blue-green: #84DCCF;
 // $awesome: #FF1053;
 .resource-page-list {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	line-height: 1.5;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
 .resource-title {
-	line-height: 1;
-	padding: 0;
-	margin-bottom: 10px;
-	margin: 0;
-	color: $jet;
+  line-height: 1;
+  padding: 0;
+  margin-bottom: 10px;
+  margin: 0;
+  color: $jet;
 }
 
+.img-size {
+  width: 80%;
+}
 .created-by {
-	padding-top: 2px;
-	font-size: 14px;
+  padding-top: 2px;
+  font-size: 14px;
 }
 
 .resource-url {
-	margin-top: 10px;
-	font-weight: 300;
-	margin-bottom: 12px;
+  margin-top: 10px;
+  font-weight: 300;
+  margin-bottom: 12px;
 }
 .hack {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .commentForm {
-	width: 100%;
-	height: 100px;
-	text-align: top;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	text-align: top;
+  width: 100%;
+  height: 100px;
+  text-align: top;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: top;
 }
 
 .comment-prompt {
-	font-size: 1.5mv;
-	font-weight: 300;
-	padding: 0;
-	margin: 0;
+  font-size: 1.5mv;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
 }
 
 .size-box {
-	margin-right: 40px;
+  margin-right: 40px;
 }
 
 .resource-content {
-	margin: 0 auto;
-	width: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 #comment-box {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 #comment-box {
-	.comments {
-		margin-top: 20px;
-		margin-bottom: 10px;
-		padding: 10px 0 10px 10px;
-		border-top: $platinum solid 1px;
-	}
+  .comments {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 0 10px 10px;
+    border-top: $platinum solid 1px;
+  }
 
-	.comments-username {
-		margin: 0;
-		font-size: 12px;
-		font-weight: 300;
-		margin-bottom: 2px;
-		color: $platinum;
-	}
+  .comments-username {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 2px;
+    color: $platinum;
+  }
 
-	.comments-body {
-		font-size: 16px;
-		color: $jet;
-	}
+  .comments-body {
+    font-size: 16px;
+    color: $jet;
+  }
 }
 
 .submit-comment {
-	font-weight: 300;
+  font-weight: 300;
 }
 
 .left-align-star {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .rating-form {
-	margin-left: -12px;
-	margin-top: -12px;
+  margin-left: -12px;
+  margin-top: -12px;
 }
 
 #resource-description {
-	margin-top: 12px;
-	display: inline-block;
+  margin-top: 12px;
+  display: inline-block;
 }

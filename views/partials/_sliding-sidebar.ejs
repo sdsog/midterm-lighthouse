@@ -1,17 +1,10 @@
 <nav id="sidebar" class="active">
-
-    <ul class="list-unstyled components">
-
+  <ul class="list-unstyled components">
     <% if(!id){ %>
-
-
-      <div class="login-forms">
-        
-          <p class="account-prompt-text">Existing user?</p>
-
-
-      <form method="POST" action="/api/users/login">
-        <div class="form-group">
+  <div class="login-forms">
+    <p class="account-prompt-text">Existing user?</p>
+    <form method="POST" action="/api/users/login">
+    <div class="form-group">
       
           <input type="email" class="form-control prompt email-form" aria-describedby="emailHelp"
             placeholder="Enter email">

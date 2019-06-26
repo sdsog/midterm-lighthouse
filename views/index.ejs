@@ -2,116 +2,74 @@
 <html lang="en">
 
 <head>
-
   <!-- ALL SCRIPTS, STYLESHEETS ETC. -->
   <% include ./partials/_scripts %>
-
   <title>Resource Manager</title>
-
 </head>
 
 <body>
-
   <div class="wrapper">
     <!-- Sidebar Holder -->
-
-      <div id="sliding-sidebar">
-        <% include ./partials/_sliding-sidebar %>
-      </div>
-
+    <div id="sliding-sidebar">
+      <% include ./partials/_sliding-sidebar %>
+    </div>
     <!-- Page Content Holder -->
     <div id="content" style="margin: 0 auto">
-
-        <div id="top-nav">
-            <% include ./partials/_nav-bar %>
+      <div id="top-nav">
+        <% include ./partials/_nav-bar %>
       </div>
-
+      <div id="search-resources" class="row search-row">
+          <div class="col text-center">
+            <div class="search-container">
+              <form class="form-group search">
+                <input type="search" name="query" placeholder="Search..." class="form-control form-control-lg text-center" >
+                <!-- <button type="button" class="btn btn-outline-primary search-button">
+                  <span>Search</span>
+                </button> -->
+              </form>
+            </div>
+          </div>
+        </div>
+      <div class="container">
+        <div id="search-results-container" class="row"></div>
     <!-- ========  LOGGED IN STATE ========  -->
-
     <div class="flex-container"> 
-
-        <% if(id){ %>
-
-          <div id="add-resource">
-              <% include ./partials/_add-resource %>
-            </div>
-
-          <div id="user-collections">
-              <% include ./partials/_user-collections %>
-            </div>
-      
-          <div id="account-settings">
-              <% include ./partials/_account-settings %>
-            </div>
-      
-          <div id="manage-resources">
-              <% include ./partials/_manage-resource %>
-            </div>
-
-
+      <% if(id){ %>
+      <div id="add-resource">
+        <% include ./partials/_add-resource %>
+      </div>
+      <div id="user-collections">
+        <% include ./partials/_user-collections %>
+      </div>
+      <div id="account-settings">
+        <% include ./partials/_account-settings %>
+      </div>
+      <div id="manage-resources">
+        <% include ./partials/_manage-resource %>
+      </div>
       <% } %>
 
     <!-- ========  LOGGED OUT STATE ======== -->
-
  
-    <div class="container">
-
         <% if(id){ %>
-
           <h2 class="text-center">All Collections</h2>
           <p class="lead text-center">Explore More Resources</p>
+        <% } else { %>
+          <h2 class="text-center">Curated Collections</h2>
+          <p class="lead text-center">Find. Collect. Share.</p>
+        <% } %>
 
-      <% } else { %>
-
-        <h2 class="text-center">Curated Collections</h2>
-        <p class="lead text-center">Find. Collect. Share.</p>
-
-      <% } %>
-
-
-        
-        <div class="row search-row">
-
-          <div class="col text-center">
-              <div class="search-container">
-                  <form class="form-group search">
-                    <input type="search" name="query" placeholder="Search..." class="form-control form-control-lg text-center" >
-                    <button type="submit" class="btn btn-outline-primary search-button">
-                        <span>Search</span>
-                    </button>
-                  </form>
-                </div>
-          </div>
-      
-        </div>
       </div>
         
-        <div id="all-collections">
-            <% include ./partials/_all-collections %>
-      </div>
-
-
+      <div id="all-collections">
+        <% include ./partials/_all-collections %>
     </div>
-
-
-
-      
-
-
-
-
     
-
-
-
-
-
-
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
   <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
-
 
 </body>
 

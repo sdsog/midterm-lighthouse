@@ -1,50 +1,50 @@
 #add-resource {
-	width: 70%;
-	margin: 0 auto;
-	height: 400px;
+  width: 70%;
+  margin: 0 auto;
+  height: 400px;
 }
 
 #add-resource {
-	.resource-box {
-		padding: 40px;
-		border-radius: 10px;
-		background-color: $platinum;
-		border: 1px solid $platinum;
-	}
+  .resource-box {
+    padding: 40px;
+    border-radius: 10px;
+    background-color: $platinum;
+    border: 1px solid $platinum;
+  }
 
-	h2 {
-		margin-top: 0;
-		font-size: 23px;
-		color: $jet;
-	}
+  h2 {
+    margin-top: 0;
+    font-size: 23px;
+    color: $jet;
+  }
 
-	p {
-		font-weight: 300;
-		font-size: 14px;
-	}
+  p {
+    font-weight: 300;
+    font-size: 14px;
+  }
 
-	.add-resource-header {
-		display: block;
-		flex: none;
-		padding: 0;
-		margin: 0;
-	}
+  .add-resource-header {
+    display: block;
+    flex: none;
+    padding: 0;
+    margin: 0;
+  }
 
-	.add-resource-input {
-		display: block;
-		flex: none;
-	}
+  .add-resource-input {
+    display: block;
+    flex: none;
+  }
 }
 
 .add-resource-input {
-	.submit-resource {
-		font-size: 18px;
-		font-weight: 400;
-	}
+  .submit-resource {
+    font-size: 18px;
+    font-weight: 400;
+  }
 
-	.resource-form {
-		font-weight: 300;
-		font-size: 14px;
-		color: $jet;
-	}
+  .resource-form {
+    font-weight: 300;
+    font-size: 14px;
+    color: $jet;
+  }
 }

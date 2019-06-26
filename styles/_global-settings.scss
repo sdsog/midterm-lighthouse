@@ -9,16 +9,16 @@ $awesome: #ff1053;
 
 /* Fonts */
 
-$primary-font: 'Roboto', sans-serif;
+$primary-font: "Roboto", sans-serif;
 
 .flex-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
 }
 
 .wrapper {
-	background-image: repeating-linear-gradient /(white, $platinum, 20%);
+  background-image: repeating-linear-gradient / (white, $platinum, 20%);
 }

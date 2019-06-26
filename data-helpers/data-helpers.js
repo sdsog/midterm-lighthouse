@@ -37,7 +37,6 @@ const dataHelpers = {
   },
 
   searchResources: function(searchData) {
-    console.log(searchData);
     return Promise.all(
       searchData.map(queryTerm => {
         return knex

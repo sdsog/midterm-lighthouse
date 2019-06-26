@@ -15,16 +15,12 @@
     <div id="sliding-sidebar">
       <% include ./partials/_sliding-sidebar %>
     </div>
-
     <!-- Page Content Holder -->
     <div id="content" style="margin: 0 auto; width:100%">
     <!-- <div id="resource-content"> -->
-
-        <div id="top-nav">
-            <% include ./partials/_nav-bar %>
-        </div>
-     
-
+      <div id="top-nav">
+        <% include ./partials/_nav-bar %>
+      </div>
       <div id="test">
         <span id="comments"></span>
         <input type="hidden" val="<%=id%>" id="resourceid" name="resourceid">
@@ -36,7 +32,7 @@
 <div class="row">
         <div class="col-6">
 
-            <img src="<%= favicon %>">
+            <img class="img-size" src="<%= favicon %>">
             <p><a href="/" class="mt-10">< Back to all collections</a></p>
 
         </div>
@@ -54,9 +50,9 @@
                     Created on <%= user_id %>3/<%= user_id %>4/2<%= user_id %>
                   </p>
                 </li>
-
-              <li><div class="rating-form">
-                    <form class="rate" action="/api/engagements/rating" method="POST">
+               
+                  <li><div class="rating-form">
+                    <form class="rate">
                       <button
                         class="rate-button btn-sm btn-success btn-secondary submit-comment" style="margin-left: 5px;margin-top:7px"
                         type="submit"
@@ -84,9 +80,10 @@
                       <label for="star1" title="text">1 star</label>
                     </form>
                   </li></ul>
-
+                  
+                <p id="rating=total"></p>
                 <p id="resource-description"><%= description %></p>
-             
+              
 
 
 

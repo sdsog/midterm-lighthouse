@@ -1,64 +1,35 @@
 
-          <div id="logo-container">
-
-            <div class="logo-box">
-                <div class="s-logo"><p><a href="/" class="noblue">N</a></p></div>
-            </div>
-
-           
-
-              </div>
-    
-             
-<nav class="navbar navbar-default">
-
-
-  
-    <div class="container-fluid">
-
-      <div class="navbar-header">
-
-
-
-        <button type="button" id="sidebarCollapse" div class="btn btn-secondary .dark-font-button" data-toggle="buttons">
-          <i class="glyphicon glyphicon-align-left"></i>
-          <span>User Settings</span>
-        </button>
-       
-        
-
-       
-
-
-        <% if(id){ %>
-
-        <div id ="user-nav-box">
-
-            <form method="POST" action="api/users/logout">
-
-        <button type="submit"  class="user-logout btn btn-info">
-          
-            <span>Logout</span>
-        </button>
-
-        </form>
-
-
-          <button type="button" id="create-resource-btn" class="create-resource btn btn-info">
-              </span>New Resource</span>
-            
-            </button>
-
-      
-
-          </div>
-
-          <% } %>
-
-
-
-
-      </div>
-
+<div id="logo-container">
+  <div class="logo-box">
+    <div class="s-logo">
+      <p><a href="/" class="noblue">N</a></p>
     </div>
-  </nav>
+  </div>
+</div>             
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" id="sidebarCollapse" div class="btn btn-secondary" data-toggle="buttons">
+        <i class="glyphicon glyphicon-align-left"></i>
+        <span>User Settings</span>
+      </button>
+      <button type="button" div class="btn btn-secondary search-btn" data-toggle="buttons">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </button>
+    
+      <% if(id){ %>
+      <div id ="user-nav-box">
+        <form method="POST" action="api/users/logout">
+          <button type="submit"  class="user-logout btn btn-info">
+            <span>Logout</span>
+          </button>
+        </form>
+        <button type="button" id="create-resource-btn" class="create-resource btn btn-info">
+          </span>New Resource</span>
+        </button>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</nav>
